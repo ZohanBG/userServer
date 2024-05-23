@@ -159,7 +159,7 @@ const server = http.createServer(async (req, res) => {
             }
         } catch (error) {
             res.writeHead(500);
-            res.end(JSON.stringify({ success: false, message: "Error logging in" }));
+            res.end(JSON.stringify({ success: false, message: "Invalid username or password" }));
         }
     }
 
