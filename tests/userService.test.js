@@ -15,14 +15,14 @@ describe('userService', () => {
   describe('registerUser', () => {
     it('should throw an error if username is taken', async () => {
       dbService.executeQuery.mockResolvedValue([{ username: 'test' }]);
-      await expect(userService.registerUser('test', 'Password1!')).rejects.toThrow('Username already taken');
+      await expect(userService.registerUser('test', 'good.email@forTest.com', 'Password1!')).rejects.toThrow('Username already taken');
     });
 
     it('should register a new user', async () => {
       dbService.executeQuery.mockResolvedValue([]);
       bcrypt.hash.mockResolvedValue('hashedPassword');
-      await userService.registerUser('test', 'Password1!');
-      expect(dbService.executeQuery).toHaveBeenCalledWith('INSERT INTO users (username, password) VALUES (?, ?)', ['test', 'hashedPassword']);
+      await userService.registerUser('test', 'good.email@forTest.com','Password1!');
+      expect(dbService.executeQuery).toHaveBeenCalledWith('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', ['test','good.email@forTest.com', 'hashedPassword']);
     });
   });
 
