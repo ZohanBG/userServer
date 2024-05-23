@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update User</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+    <form id="update-form">
+        <h2>Update user</h2>
+        <label for="newUsername">New Username:</label><br>
+        <input type="text" id="newUsername" name="newUsername"><br>
+        <label for="newPassword">New Password:</label><br>
+        <input type="password" id="newPassword" name="newPassword"><br>
+        <label for="captcha">Captcha:</label><br>
+        <img id="captcha-image" src="" alt="CAPTCHA image"><br>
+        <input type="text" id="captcha" name="captcha" required><br>
+        <input type="submit" value="Update">
+    </form>
+
+    <script src="/static/update.js"></script>
+</body>
+
+</html>

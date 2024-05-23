@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+
+<body>
+    <form id="register-form">
+        <h2>Registration Form</h2>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="repeat-password">Repeat Password:</label><br>
+        <input type="password" id="repeat-password" name="repeat-password" required><br>
+        <label for="captcha">Captcha:</label><br>
+        <img id="captcha-image" src="" alt="CAPTCHA image"><br>
+        <input type="text" id="captcha" name="captcha" required><br>
+        <input type="submit" value="Register">
+    </form>
+    <script src="/static/register.js"></script>
+</body>
+
+</html>
